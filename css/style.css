@@ -1,0 +1,385 @@
+/* Start Varaibles */
+:root {
+    --green: #27ae60;
+    --black: #192a56;
+    --white: #fff;
+    --light-color: #666;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --transition: 0.5s;
+    --primary: #eee;
+    --border-raduis: 0.2rem;
+}
+/* End Varaibles */
+/* Start Global Rules */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+}
+.btn {
+    padding: 0.2rem 1.5rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+.btn-black {
+    background-color: var(--black);
+    color: var(--white);
+    transition: var(--transition);
+    border-radius: var(--border-raduis);
+    border: none;
+}
+.btn-black:hover {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: var(--border-raduis);
+    border: none;
+    transform: scalex(1.2);
+}
+.title h6 {
+    color: var(--green);
+    font-weight: bold;
+    margin-bottom: 0rem;
+}
+.title h4 {
+    color: var(--black);
+    font-weight: bold;
+}
+/* End Global Rules */
+/* Start Navbar */
+.navbar {
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+}
+.navbar .navbar-brand {
+    color: var(--black);
+}
+.navbar .navbar-brand svg {
+    color: var(--green);
+}
+.navbar .navbar-nav .nav-link {
+    color: var(--light-color);
+    padding: 0.2rem 0.8rem;
+    transition: var(--transition);
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    background-color: var(--green);
+    border: none;
+    border-radius: var(--border-raduis);
+    color: var(--white);
+}
+.fa-bars {
+    font-size: 1rem;
+}
+.navbar .icons a {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+.navbar .icons a svg {
+    transition: var(--transition);
+    color: var(--black);
+}
+.navbar .icons a:hover {
+    background-color: var(--green);
+}
+.navbar .icons a:hover svg {
+    transform: rotate(360deg);
+    color: var(--white);
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+    background-color: var(--green);
+    color: var(--white);
+}
+.navbar .navbar-toggler:focus .fa-bars {
+    transform: rotate(45deg);
+}
+@media(max-width: 991px) {
+    .navbar .navbar-nav .nav-link {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .navbar .navbar-nav .nav-link:not(.active) {
+        background-color: var(--primary);
+    }
+    .navbar .navbar-nav .nav-link:hover:not(.active) {
+        color: var(--white);
+        background-color: var(--green);
+    }
+    .navbar .navbar-nav .nav-link.active {
+        margin-top: 1.5rem;
+    }
+    .navbar::after {
+        width: 100%;
+    }
+    .navbar .navbar-toggler {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 1px solid var(--primary);
+        background-color: var(--primary);
+        color: var(--black);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* End Navbar */
+/* Start Home Section */
+.home {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+}
+.home .item h5 {
+    color: var(--green);
+}
+.home .item h1 {
+    font-size: 3rem;
+    color: var(--black);
+    font-weight: bold;
+}
+.home .item p {
+    font-size: 1.1rem;
+    color: var(--light-color);
+}
+.owl-theme .owl-nav {
+    display: none;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 3px 5px;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: var(--green);
+}
+/* End Home Section */
+/* Start Dishes Section */
+.dishes {
+    background-color: var(--primary);
+}
+.dishes .box {
+    background-color: var(--white);
+    padding: 1rem;
+    height: 100%;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+.dishes .box .icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+}
+.dishes .box:hover .icon {
+    opacity: 1;
+}
+.dishes .box .icon svg {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.dishes .box .icon svg:hover {
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--primary);
+}
+.dishes .box .text  h5 {
+    color: var(--black);
+    font-weight: 700;
+}
+.dishes .box .text .stars {
+    margin-top: -0.5rem;
+}
+.dishes .box .text .stars svg {
+    font-size: 0.8rem;
+    color: var(--green);
+}
+.dishes .box .payment {
+    margin-top: 0.5rem;
+}
+.dishes .box .payment span {
+    color: var(--green);
+    font-weight: bold;
+}
+/* End Dishes Section */
+/* Start About Section */
+.about h2 {
+    color: var(--black);
+}
+.about p {
+    color: var(--light-color);
+    line-height: 1.6;
+}
+.about .content .info {
+    background-color: var(--primary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    border-radius: var(--border-raduis);
+}
+.about .content .info svg {
+    color: var(--green);
+}
+.about .content .info span {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-left: 0.2rem;
+}
+/* End About Section */
+/* Start Menu Section */
+.menu {
+    background-color: var(--primary);
+}
+.menu .box {
+    padding: 0.8rem;
+    height: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+.menu .box .img {
+    position: relative;
+}
+.menu .box .img img {
+    border-radius: var(--border-raduis);
+}
+.menu .box .img svg {
+    width: 1rem;
+    height: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+    position: absolute;
+    right: 0.8rem;
+    top: 0.8rem;
+}
+.menu .box .img svg:hover {
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+.menu .box .stars {
+    margin-top: 0.5rem;
+}
+.menu .box .stars svg {
+    font-size: 0.8rem;
+    color: var(--green);
+}
+.menu .box .text {
+    margin-top: 0.5rem;
+}
+.menu .box .text h5 {
+    color: var(--black);
+    font-weight: 700;
+}
+.menu .box .text p {
+    color: var(--light-color);
+}
+.menu .box .payment span {
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+/* End Menu Section */
+/* Start Review Section */
+.review .testimonial {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-raduis);
+    padding: 0.8rem;
+}
+.review .testimonial .contain .left-side img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.review .testimonial .contain .left-side .text {
+    margin-left: 0.5rem;
+}
+.review .testimonial .contain .left-side .text h6 {
+    font-weight: bold;
+    color: var(--black);
+}
+.review .testimonial .contain .left-side .text .stars {
+    margin-top: -0.5rem;
+}
+.review .testimonial .contain .left-side .text .stars svg {
+    font-size: 0.8rem;
+    color: var(--green);
+}
+.review .testimonial .contain .right-side svg {
+    font-size: 2rem;
+    color: var(--light-color);
+}
+/* End Review Section */
+/* Start Order Section */
+.order {
+    background-color: var(--primary);
+}
+.order form {
+    background-color: var(--white);
+    padding: 0.8rem;
+    border-radius: var(--border-raduis);
+    box-shadow: var(--box-shadow);
+}
+.order form .form-control {
+    border-radius: var(--border-raduis);
+    background-color: var(--primary);
+    border: none;
+    outline: none;
+}
+.order form label {
+    font-size: 0.9rem;
+    color: var(--light-color);
+}
+/* End Order Section */
+/* Start Footer */
+footer .footer-top h4 {
+    color: var(--black);
+    font-weight: 700;
+}
+footer .footer-top p {
+    line-height: 1;
+}
+footer .footer-top p a {
+    text-decoration: none;
+    color: var(--light-color);
+    transition: var(--transition);
+}
+footer .footer-top p a:hover {
+    text-decoration: underline;
+}
+footer .copyright p {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.45rem;
+}
+footer .copyright p span {
+    color: var(--green);
+}
+/* End Footer */
